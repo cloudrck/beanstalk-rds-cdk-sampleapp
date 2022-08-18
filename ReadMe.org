@@ -1,0 +1,35 @@
+* AWS Beanstalk, RDS, CDK Sample Application
+This Cloud Development Kit code can be used as a reference point to jump start your own CDK application.
+** Prerequisites
+- [[https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html][AWS CLI v2]]
+- [[https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install][AWS CDK]]
+- Python v3
+- venv (or your favorite Python virtual environment)
+** Getting Started
+Create a virtualenv to use for installing required Python libraries.
+#+begin_src sh
+python -m venv .ebrds_env
+#+end_src
+Activate the environment:
+#+begin_src sh
+source .ebrds_env/bin/activate
+#+end_src
+Install python packages with Pip:
+#+begin_src sh
+pip install -r requirements.txt
+#+end_src
+** Deploy
+Go through the source code and change code to fit your project. Including, but not limited to changing the region and account information in ~app.y~, adding your Beanstalk zip file to the code, and set the Network settings you prefer.
+
+The CDK tools expects your [[https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html][aws profile to be configured]] 
+
+Bootstrap your AWS environment:
+#+begin_src sh
+cdk bootstrap --profile YOURAWSPROFILE
+#+end_src
+Deploy both stacks.
+#+begin_src sh
+  cdk deploy --all --profile YOURAWSPROFIE
+#+end_src
+
+
