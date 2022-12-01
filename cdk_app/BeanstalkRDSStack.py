@@ -141,11 +141,10 @@ class BeanstalkRDSStack(Stack):
                 value='application'
                 )
                               ]
-        # Important Environment settings. Note: Make sure to check most recent valid versions of `solution_stack_name`
-        # https://docs.aws.amazon.com/cli/latest/reference/elasticbeanstalk/list-available-solution-stacks.html
+
         elvEnv = eb.CfnEnvironment(self, 'Environment',
             application_name=appName,
-            solution_stack_name='64bit Amazon Linux 2 v3.3.16 running Python 3.8',
+            solution_stack_name=props['beanstalk_stack'],
             option_settings=eb_option_settings,
             version_label=appVersionProps.ref
             )
