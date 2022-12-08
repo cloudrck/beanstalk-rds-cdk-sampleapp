@@ -21,7 +21,7 @@ pip install -r requirements.txt
 *** dotenv
 Decided to use [[https://github.com/theskumar/python-dotenv][python-dotenv]] for this sample CDK App, though you are free to use another DotEnv file loader, or not.
 
-The library expects the config file to be located in the project's root directory (same folder as the `app.py` file).
+The library expects the config file to be located in the project's root directory (same folder as the ~app.py~ file).
 
 #+begin_src dotenv
 REGION=us-east-1
@@ -30,7 +30,7 @@ WAN_IP="1.1.1.1"
 #+end_src
 
 ** Deploy
-Go through the source code and change code to fit your project. Including, but not limited to changing the region and account information in ~app.y~, adding your Beanstalk zip file to the code, and set the Network settings you prefer.
+Go through the source code and change code to fit your project. Including, but not limited to changing the region and account information in ~app.py~, adding your Beanstalk zip file to the code, and set the Network settings you prefer.
 
 The CDK tools expects your [[https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html][aws profile to be configured]] 
 
